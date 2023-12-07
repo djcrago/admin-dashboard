@@ -12,12 +12,12 @@ img {
     width: 30px;
 }
 
-.dashboard {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+.dashboard {  
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 100vh;
     width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
 }
 
 .sidebar {
@@ -51,21 +51,18 @@ img {
     width: 20px;
 }
 
-.logo-1 {
-    height: 25px;
-}
-
-.logo-3 {
-    height: 15px;
-    align-self: flex-end;
-}
-
-.logo-2 {
-    height: 15px;
-}
-
+.logo-1,
 .logo-4 {
     height: 25px;
+}
+
+.logo-2,
+.logo-3 {
+    height: 15px;
+}
+
+.logo-3,
+.logo-4 {
     align-self: flex-end;
 }
 
@@ -94,27 +91,30 @@ img {
 }
 
 .side-item p,
-.name p {
+.name p,
+.projects > p,
+.announcements-area > p,
+.trending > p {
     font-size: large;
     font-weight: bold;
 }
 
 .header {
+    padding: 15px;
     grid-column: 2;
     grid-row: 1;
     display: grid;
     grid-template-rows: 1fr 2fr;
     gap: 10px;
-    padding: 15px;
 }
 
 .top,
 .bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10vw;
     justify-items: center;
     align-items: center;
+    gap: 10vw;
 }
 
 .search {
@@ -178,13 +178,6 @@ input[type="search"] {
     gap: 10px;
 }
 
-.projects > p,
-.announcements-area > p,
-.trending > p {
-    font-weight: bold;
-    font-size: large;
-}
-
 .cards {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
@@ -206,13 +199,15 @@ input[type="search"] {
 }
 
 .card h3,
-.announcement h4 {
+.card p,
+.announcement h4,
+.announcement p,
+.info p {
     color: rgb(70, 70, 70);
 }
 
 .card p {
     grid-column: 1 / 4;
-    color: rgb(70, 70, 70);
 }
 
 .icons {
@@ -240,11 +235,6 @@ input[type="search"] {
     border-bottom: 1px solid lightgray;
     padding: 20px 0px;
     margin: 20px 0px;
-}
-
-.announcement p,
-.info p {
-    color: rgb(70, 70, 70);
 }
 
 .trending {
